@@ -1,0 +1,346 @@
+
+Example 	#stacks	#clocks	#states	#tran  	Max Cons	run time	uppaal run time	
+p1			1		0		5		5		5			0.004 sec		NA
+
+p2			1		0		3		3		5			0.013 sec		NA
+
+p3			1		0		5		6		5			0.072 sec		NA		
+
+p4			1		0		4		6		50			50 sec			NA
+		
+p5			1		0		5		7		5			0.034 sec		NA
+
+t1			0		2		5		5		5			5.52 sec		0.002 sec
+
+t2			0		2		2		3		9			84 sec			0.002 sec
+
+t3			0		1		3		3		1			0.02 sec		0.002 sec
+
+t4			0		2		3		4		5			3.13 sec		0.004 sec
+
+t5			0		2		3		3		2			1.99 sec		0.004 sec
+
+t6			0		1		3		4		2			0.05 sec		0.004 sec
+
+t7			0		2		2		4		2			0.04 sec		0.004 sec
+
+t8 			0		2		4		6		2			2.64 sec		0.004 sec
+
+t9			0		2		4		6		1			1.34 sec		.004 sec
+
+t10			0		3		6		8		6			279 sec			0.008 sec
+
+t11			0		4		6		8		5			228 sec
+
+tp1			1		2		3		4		2			538.892 sec		NA
+
+tp2			1		1		3		3		1			34.1568 sec		NA
+
+tp3			1		1		3		2		2			0.2379 sec		NA
+
+tp4			1		1		4		2		1			0.582661 sec	NA
+
+tp5			1		1		5		4		1			3.20973			NA
+
+tp6			1		2		6		8		4			1.5 hours		NA
+
+
+
+Example		|X|		Transitions		Maximum constants		Run time
+tp9			1		1				1						0.000437 seconds
+
+tp10		1		1				2						0.00025 seconds
+
+tp11		1		1				3						0.016949 seconds
+
+tp12		1		1				4						0.015443 seconds
+
+tp13		1		1				5						0.035402 seconds
+
+tp14		1		1				10						0.105494 seconds
+
+tp15		1		1				20						0.420387 seconds
+
+tp16		1		1				50						2.0639 seconds
+
+tp17		1		1				100						8.08796 seconds
+
+tp17		1		1				120						11.4239 seconds
+
+
+tp19		1		2				1						0.209932 seconds
+
+tp20		1		2				2						0.692367 seconds
+
+tp21		1		2				3						2.24773 seconds
+
+tp22		1		2				4						8.06586 seconds
+
+tp23		1		2				5						19.6632 seconds
+
+tp24		1		2				6						36.236 seconds
+
+tp25		1		2				7						141.894 seconds
+
+tp26		1		2				8						290.82 seconds
+
+tp27		1		2				9						428.632 seconds
+
+
+tp28		1		3				1						0.264313 seconds
+
+tp29		1		3				2						2.85213 seconds
+
+tp30		1		3				3						8.32226 seconds
+
+tp31		1		3				4						18.5062 seconds
+
+tp33		1		3				5						35.0779 seconds
+
+tp34		1		3				6						99.1919 seconds
+
+tp35		1		3				7						234.359 seconds
+
+tp36		1		3				8						370.326 seconds
+
+tp37		1		3				9						966.927 seconds
+
+
+tp38		1		4				1						(not completed in 20 min time with full color)
+
+tp38		1		4				1						0.741028(4-colors)
+
+tp39		1		4				2						6.90133(4-colors)
+
+tp40		1		4				2						34.6366(4-colors)
+
+tp41		1		4				3						42.9276(4-colors)
+
+tp42		1		4				4						197.58(4-colors)
+
+
+tp42		2		1				1						0.044485
+
+tp43		2		1				2						0.048453
+
+tp45		2		1				20						4.10182
+
+tp46		2		1				50						21.0796
+
+tp47		2		1				100						21.1479
+
+
+tp48		2		2				1						0.950384
+
+tp49		2		2				2						5.49052						
+
+tp49		2		2				3						13.1378
+
+tp50		2		2				4						30.5954
+
+tp51		2		2				5						47.9801
+
+
+tp52		2		3				1						0.967496		
+
+tp53		2		3				2						4.23774
+
+tp54		2		3				3						10.7196
+
+tp55		2		3				4						22.2556
+
+tp56		2		3				5						
+
+
+pushdown system :
+#trans 	M 	time
+6		0	0.000275
+6		1	0.003488
+6		2	0.010188
+6		3	0.005319
+6 		4	0.022071	
+6		5	0.066717
+6		6	0.023303
+6		7	0.039065
+6		8	0.067187	
+6		10	0.135559
+		15	0.572183
+		20	1.64088
+		25	3.78623
+		30	7.95845
+		35	15.8334
+		40	24.1085
+		45	37.6506
+		
+		
+		
+#trans	run time
+0	0.000243
+1	0.001314
+2	0.002179
+3	0.002127
+4	0.014129
+5	0.024787
+6	0.030262
+7	0.034
+14	2.98399
+15	5.09424
+25	16.6489
+26	20.2956
+29	23.9509
+Ram in the machine : 8 gb
+#cpus : 4
+cpu model :     Intel(R) Core(TM) i5-4690 CPU @ 3.50GHz
+
+
+
+
+
+**********
+New code : general one clock + one stack:
+Eg.		#trans	M		(sec)run time
+tp17	1		120		0.000519
+tp27	2		9		0.000172
+tp61	2		10		0.000126
+tp61	2		120		0.000368
+tp37	3		9		0.001152
+tp37	3		120		0.077424
+tp42	4		4		0.00064
+tp42	4		120		0.180572
+***********
+
+New code : general one clock + one stack:
+Experiments done on tpg2(#tran = 6)
+M 	time
+1	0.000887
+2	0.005571
+3	0.03677
+4	0.18576
+5	0.732166
+6	2.41135
+7	6.72983
+8	17.3284
+9	45.1559	
+10	104.982
+11 	196.923
+
+New code : general one clock + one stack:
+Experiments done on (M == 5)
+e.g.	#trans	time
+1		0.000262
+2		0.000318
+3		0.000468
+4		0.000758
+5		0.001677
+8		0.004263
+9		0.00814
+
+
+one stack + one clock(consecutive reset and transitions) :
+e.g tps4(#transitions = 6)
+
+M		Run time
+1		0.000343
+3		0.00043
+5		0.000517
+7		0.000591
+9		0.000918
+10		0.001131
+11		0.001349
+12		0.001527
+13		0.001925
+14		0.002434
+20		0.006207
+25		0.014641
+30		0.022661
+35		0.039456
+40		0.063975
+50		0.146298
+55		0.209322
+60		0.29141
+70		0.524645
+80		0.935695
+90		1.41289
+100		2.11851
+110		3.09092
+120		4.33606
+
+one stack + one clock(consecutive reset and transitions) tricky example(tps5) (#transitions=8) :
+M 	Runtime
+6	0.00295
+7	0.004041
+8	0.005887
+10	0.009491
+12 	0.022176
+15	0.045263
+20	0.130269
+25	0.231522
+30	0.289782
+40	0.776147
+50	1.7009
+70	5.93762
+100	23.0724
+
+one stack + one clock(consecutive reset and transitions) :
+M = 10
+E.G 	#trans		Runtime
+tps6		1		0.000176
+tps7		2		0.000366
+tps8		3		0.000295
+tps9		4		0.000329
+tps10		5		0.000335
+why the graph is not smooth : Run time depdend on the particular structure of the automation. We are considering only timed system recognizes empty language. If the
+language is empty, then all possible tree automata states will be generated.
+(i) Maximal Constant
+(ii) Depends on the constraints. As the number and constraints increases, less number of tree automata states will be generated.
+(iii) How many possibility are there for the next transition coming and what are the possible tsm values.
+(iv) How many push or pops are there. As the number of push pop increases, less number of possible tree automata states generated.
+(v) Depends on the os scheduling(how much time given to this process)
+
+Constraints :
+1. GLobal time bound : [3,3]
+2. Time bound on staying on junction 9 : [1,1]
+
+3.
+(i) After starting journey, bound on visiting time of place 1 : [2,3]
+(ii) After starting journey, bound on visiting time of place 2 : [1,2]
+(iii) After starting journey, bound on visiting time of place 3 : [1,1]
+(iv) After visiting place 2, bound on visiting time of place 4 : [1,2]
+(v) After visiting place 2, bound on visiting time of place 5 : [0,1]
+(vi) After visiting place 2, bound on visiting time of place 6 : [0,1]
+(vii) After visiting place 5, bound on visiting time of place 7 : [2,3]
+(viii) After visiting place 5, bound on visiting time of place 8 : [0,1]
+
+
+
+
+Automata Construction process :
+1. Constraints (1) and (2) is similiar to earliar approach we discussed
+2. For constraints (3), if the constraint is :
+	After visiting place i, bound on visiting time of place j : [a,b]
+	
+	In this construction pop of symbol i denotes : visit  of place i
+	Then, after popping symbol i, push the symbol j. When popping symbol j the bound is [a,b]
+	
+	
+	
+	
+Experiments on nested maze : p26(#transitions 39) :
+
+M	run_time(sec)
+0	0.106245
+1	0.977339
+2	4.40974
+3	12.786
+4	30.6616
+5	65.925
+6	130.821
+7	232.286
+8	382.595
+9	574.995
+
+
+(34, 0.0), (35, 0.0), (26, 0.0), (3, 0.0), (28, 0.0), (23, 0.0), (16, 0.0), (2, 0.0), (36, 0.0), (37, 0.0), (17, 0.0), (13, 0.0), (10, 0.0), (20, 0.0), (6, 0.0), (22, 0.0), (11, 0.0), (29, 0.0), (5, 0.0), (38, 0.0), (31, 0.0), (23, 0.0), (17, 0.0), (12, 0.0), (8, 0.0), (13, 0.0), (10, 0.0), (21, 0.0), (7, 0.0), (22, 0.0), (9, 0.0), (15, 0.0), (18, 0.0), (24, 0.0), (27, 0.0), (4, 0.0), (28, 0.0), (23, 0.0), (17, 0.0)
+
+32 34 35 3 36 37 5 38 (22 13 30) 39
+14 16 26 27 29 20 21 12 (9 10 11) 33

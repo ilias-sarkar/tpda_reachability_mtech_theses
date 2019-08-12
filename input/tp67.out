@@ -1,0 +1,33 @@
+digraph finite_state_machine {
+	node [shape = point ]; qi0;
+	node [shape = doublecircle];1;
+	node [shape=circle];
+	qi0 -> 0;
+	0 -> 1 [ label = "{tn:0,x1:=0}" ];
+	1 -> 2 [ label = "{tn:1,ps_1}" ];
+	2 -> 3 [ label = "{tn:2}" ];
+	3 -> 2 [ label = "{tn:3}" ];
+	3 -> 4 [ label = "{tn:4}" ];
+	4 -> 3 [ label = "{tn:5}" ];
+	4 -> 5 [ label = "{tn:6}" ];
+	5 -> 4 [ label = "{tn:7}" ];
+	5 -> 6 [ label = "{tn:8}" ];
+	6 -> 5 [ label = "{tn:9}" ];
+	6 -> 7 [ label = "{tn:10}" ];
+	7 -> 6 [ label = "{tn:11}" ];
+	7 -> 8 [ label = "{tn:12}" ];
+	8 -> 7 [ label = "{tn:13}" ];
+	8 -> 9 [ label = "{tn:14}" ];
+	9 -> 8 [ label = "{tn:15}" ];
+	9 -> 10 [ label = "{tn:16}" ];
+	10 -> 9 [ label = "{tn:17}" ];
+	10 -> 11 [ label = "{tn:18}" ];
+	11 -> 10 [ label = "{tn:19}" ];
+	11 -> 12 [ label = "{tn:20}" ];
+	12 -> 11 [ label = "{tn:21}" ];
+	12 -> 13 [ label = "{tn:22}" ];
+	13 -> 12 [ label = "{tn:23}" ];
+	13 -> 14 [ label = "{tn:24}" ];
+	14 -> 13 [ label = "{tn:25}" ];
+	2 -> 1 [ label = "{tn:26,6<=x1<=10,pp_1:11<=ag(1)<=15}" ];
+}

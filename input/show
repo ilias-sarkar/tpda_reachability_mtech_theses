@@ -1,0 +1,6 @@
+./tree input/sample
+./tree input/tp6 : replace (6,5) : [0,1] -> [0,2]*
+./tree input/tp62 : big max constant
+./tree input/tp63 : long run*
+./tree input/tpg9 : medium size auto
+

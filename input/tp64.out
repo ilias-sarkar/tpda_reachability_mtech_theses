@@ -1,0 +1,11 @@
+digraph finite_state_machine {
+	node [shape = point ]; qi0;
+	node [shape = doublecircle];5;
+	node [shape=circle];
+	qi0 -> 0;
+	0 -> 1 [ label = "{tn:0,x1:=0}" ];
+	1 -> 2 [ label = "{tn:1}" ];
+	2 -> 3 [ label = "{tn:2,ps_1}" ];
+	3 -> 4 [ label = "{tn:3,pp_1:1<=ag(1)<=2}" ];
+	4 -> 5 [ label = "{tn:4,pp_1:0<=ag(1)<=inf,ps_1}" ];
+}

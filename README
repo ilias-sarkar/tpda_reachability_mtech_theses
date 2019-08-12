@@ -1,0 +1,29 @@
+INSTALLATION GUIDE :
+
+  1. Install c++ compiler g++ .
+
+  2. Install the graph drawing tool 'graphviz' using the following command in the terminal
+	sudo apt-get install graphviz
+
+BUILD THE SOURCE FILES :
+
+	1.Come to the project folder 'mtp2' in the terminal
+	2. Execute the following command :
+		make
+	3. executable fileS named 'tree' and 'drawsystem' should be created
+
+
+HOW TO RUN THE TOOL :
+
+1. First write an input file corresponding the timed system. Sample example with explanation has been given in the file 'input/sample'. Let us consider you have created a file named 'automata.txt' in the folder './input'.
+
+2. Run the following command in the terminal to see the automaton graphically :
+	./draw.sh input/automata.txt
+		
+3. Check for emptiness of the timed sytem by running the follwing command in the terminal:
+		./tree <input_file_path> <optional_param>
+		Example :
+			./tree input/automata.txt
+
+
+Congrats, You have just done your job.

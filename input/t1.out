@@ -1,0 +1,12 @@
+digraph finite_state_machine {
+	node [shape = point ]; qi0;
+	node [shape = doublecircle];6;
+	node [shape=circle];
+	qi0 -> 0;
+	0 -> 1 [ label = "{tn:0,x1:=0,x2:=0}" ];
+	1 -> 2 [ label = "{tn:1,5<=x2<=inf,x2:=0}" ];
+	2 -> 3 [ label = "{tn:2,0<=x1<=4}" ];
+	5 -> 4 [ label = "{tn:3,0<=x1<=4}" ];
+	1 -> 5 [ label = "{tn:4,2<=x1<=inf,x2:=0}" ];
+	4 -> 3 [ label = "{tn:5,5<=x2<=inf}" ];
+}

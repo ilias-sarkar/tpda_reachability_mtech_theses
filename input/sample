@@ -1,0 +1,81 @@
+4 4 2 0 2
+
+1
+
+4
+
+1 2 0 1 1
+2 2 3
+1
+1 1
+
+1 4 0 0 0
+2 2 2 2
+
+2 3 0 2 0
+1 0 2
+2 1 2
+3 1 0 2 2
+
+3 1 0 0 2
+1 2
+0
+
+******CORRESPONDING TO THE ABOVE INPUT REFER TO THE TIMED SYSTEM GIVEN IN THE PICTURE 'sample.png'  *******
+Transition description of the automaton :
+	Each transition contain four information : 
+		(i) Transition number(Transition number 3 shown as : 'tn:3')
+		(ii) Clock constraint(x1>=2 && x2==3 is shown as : '2 <= x1 <= inf, 3<=x2<=3')(for tpda and timed automation)
+		(iii) Update or reset of clocks(x1:=0,x2:=0 is shown as : 'x1:=0,x2:=0')(for tpda and timed automation)
+		(iv) Stack Operations :(for tpda and pushdown system with age checking while popping)
+			(a) Nop(No operation) : shown as : 'np'.
+			(b) push symbol 2 : shown as 'ps_2'.
+			(c) Pop symbol 2 with age between 2 and 5 shown as : 'pp_2:2<=ag(2)<=5'
+			
+			
+			
+			
+
+INPUT FORMAT(Ignore blank lines and spaces) :
+
+1. First line of the input(5 space separated integers) : <#states> <#transitions> <#clocks> <#actions> <#stack_symbols>
+
+	In the above example, Input for the first line is : 3 3 2 0 2
+	Number of states is 3( they are numbered as 1, 2 and 3)
+	Number of transitions is 3( they are numbered as 1, 2 and 3)
+	Two clocks are there( they are numbered as x_1 and x_2 )
+	Actions are not important for us, So simply enter 0 in place of 'number of actions'
+	Number of stack symbols is 2( they are numbered as 1 and 2)
+
+2. Second line : Initial state number(1 is the initial state for the above example)
+
+3. Third line : Final state number(4 is  the final state for the above example)
+
+4. For each transitions, there can be variable number of lines.
+	First line of each transition(5 space separated integers) : <source_state> <target_state> <action> <#guards> <#resets>
+		For the above example, in the first transition :
+			source state : 1
+			target state : 2
+			action : 0(action is not important for us, just put 0 in place of action)
+			#guards : number of clock checks are there
+			#resets : number of clock reset at this transition
+	If number of clock check(#guards) is m, then each of the next m lines will have three space separated intergers : <clock_number> <lower_bound> <upper_bound>
+		clock_number : clock(x) for which there is a check in this transition
+		lower bound : x >= lower_bound is the lower bound constraint
+		upper bound : x <= upper_bound is the upper bound constraint
+		overall the constraint is lower_bound <= x <= upper_bound
+
+	If number of clock reset at this transition is n, then the next line has n space separated integers : Each integer is a clocks_number has been reset in this transition
+
+	Last line of the input can contain maximum 5 space separated integers : <stack_op> 
+	The value of first integer determine the stack operation
+	First interger is 0 : no stack operation
+	First interger is 1 : Only stack push operation, This integer will be followed by another integer : <stack_symbol_2>
+	First interger is 2 : Only stack pop operation, This integer will be followed by another three space separated integers : <stack_symbol> <lower_bound> <upper_bound>
+	First interger is 3 : Both pop and push happens at this transition, This integer will be followed by another four space separated integers : <stack_symbol> <lower_bound> <upper_bound> <stack_symbol_2>
+	where
+		<stack_symbol> : stack symbol number popped in this transition
+		<lower_bound> : lower bound on the age of the stack symbol currently popped in this transition
+		<upper_bound> : lower bound on the age of the stack symbol currently popped in this transition
+		<stack_symbol_2> : stack symbol number pushed in this transition		
+
